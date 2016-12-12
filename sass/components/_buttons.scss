@@ -1,0 +1,28 @@
+// BUTTONS 
+.btn {
+    padding: .875em 3.875em;
+}
+
+.btn-primary {
+    background-color: #78c401;
+    // Allow for nice tap targets sizes
+    padding: .875em 3.875em;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 300;
+    box-shadow: 0em 0em .2em .2em transparent;
+    transition: all 0.4s ease-in-out;
+
+    &--bold {
+        font-weight: bold;
+    }
+
+    @include break(lg) {
+        width: 47%;
+        padding: 1em;
+        font-size: .95em;
+    }
+}
+
+// BUTTONS STATE
+@import '../state/_buttons-state';

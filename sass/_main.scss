@@ -1,0 +1,15 @@
+/*
+    MASTER SASS FILE
+    ================
+    This file contains imports of master files for each SASS folder.
+    The structure of the files follow SMACSS architecture.
+*/
+
+// HELPERS
+@import './helpers/_h-master';
+// BASE
+@import './base/_b-master';
+// LAYOUT
+@import './layout/_l-master';
+// COMPONENTS
+@import './components/_c-master';

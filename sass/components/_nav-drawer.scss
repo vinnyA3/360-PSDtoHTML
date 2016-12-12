@@ -1,0 +1,37 @@
+// Nav Drawer styling .. ugly - refactor later
+
+.nav-drawer {
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    background: #4698bc;
+    color: #fff;
+    padding: 1em 0em;
+    z-index: 5000;
+    box-shadow: 0 .2em .4em .2em hsla(0%, 100%, 0%, .4%);
+
+    &__close {
+        position: absolute;
+        top: .6em;
+        right: .6em;
+        font-size: 2.435em;
+        padding: .6em .8em;
+        background: #3D8AAA;
+    }
+
+    &__links {
+        margin-top: 5.5em;
+    }
+
+    &__link-item {
+        width: 100%;
+        display: block;
+        font-size: 1.845em;
+        font-weight: bold;
+        padding: .8em 1.4em;
+        
+        &:not(:last-child) {
+            border-bottom: .01em solid #fff;
+        }
+    }
+}

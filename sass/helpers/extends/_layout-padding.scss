@@ -1,0 +1,16 @@
+$padding-top-bottom-sm: 2.25rem;
+$padding-left-right-sm: 1.25rem;
+$padding-top-bottom-md: 2.25rem;
+$padding-left-right-md: 2.625rem;
+$padding-top-bottom-lg: 4.25rem;
+$padding-left-right-lg: 8.625rem;
+
+%layout-padding {
+   padding: $padding-top-bottom-sm $padding-left-right-sm;
+   @include break(sm) {
+        padding: $padding-top-bottom-md $padding-left-right-md; 
+   }
+   @include break(lg) {
+        padding: $padding-top-bottom-lg $padding-left-right-lg;
+   }
+}

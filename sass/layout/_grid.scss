@@ -1,0 +1,27 @@
+/*
+    THE GRID
+    desc: The is an EXTREMELY simple grid system
+*/
+
+.grid {
+    @extend %maximum-width;
+    @include flex(justify-content, flex-start, row, wrap);
+}
+
+.grid__item {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    @include break(lg) {
+        &--half {
+            width: 50%;
+        }
+        &--full {
+            width: 100%;
+            // SHAME
+            margin-bottom: 2.25rem;
+        }
+    }
+
+}

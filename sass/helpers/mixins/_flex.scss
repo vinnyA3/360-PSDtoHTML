@@ -1,0 +1,12 @@
+// FLEX MIXIN
+// desc: mixin to include base flex style for parent.
+// parameters for justifying content and direction default
+// to justify-content and row respectively
+
+@mixin flex($justify-content: flex-start, $align-items: flex-start, $direction: row, $wrap: null) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}

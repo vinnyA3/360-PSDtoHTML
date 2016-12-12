@@ -1,0 +1,17 @@
+// Breakpoint mixin
+// desc: Mixin to reduce our media query bloat
+
+$breakpoints: (
+    xs: 390px,
+    sm: 500px,
+    md: 700px,
+    lg: 61.875rem,
+    xl: 76.375rem,
+    xx: 88.69rem
+);
+
+@mixin break($size) {  
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

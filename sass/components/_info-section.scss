@@ -1,0 +1,7 @@
+.info-section {
+    @include media;
+
+    &--darker {
+        background: #f1f5f8;
+    }
+}

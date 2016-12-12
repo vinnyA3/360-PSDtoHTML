@@ -1,0 +1,11 @@
+/*
+    BUTTON STATES
+*/
+
+// btn-primary
+.btn-primary:hover {
+    cursor: pointer;
+    background: #78c401;
+    transform: translateY(-.5em);
+    box-shadow: 0em .6em .2em -.4em hsla(100%, 100%, 0%, 0.4%);
+}

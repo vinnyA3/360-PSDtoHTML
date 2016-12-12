@@ -1,0 +1,72 @@
+/*
+    NAVIGATION COMPONENT
+    desc: main navigation component
+
+    Note that I do use nested selectors here. Even though I advise
+    against nested selectors in CSS, here, one can deduce that a navigation
+    will almost always contain li elements. This is the reason for such tight
+    coupling.
+*/
+
+.nav {
+    width: 100%;
+    @extend %layout-padding;
+    @include flex(space-between, center, row);
+
+    &__links, &__brand, &__hamburger {
+        flex: 1;
+    }
+
+    &__links {    
+       display: none;
+   
+       @include break(lg) {
+           display: block;
+           @include flex(flex-end, flex-start, row);
+       }
+    }
+
+    &__hamburger {
+        display: block;
+        font-size: 2.4rem;
+        @include flex(flex-end, center, row);
+
+        @include break(lg) {
+            display: none;
+        }
+    }
+
+    &__brand > img {
+        width: 12em;
+
+        @include break(xs) {
+            width: 14em;
+        }
+        
+        @include break(lg) {
+            width: 60%;
+        }
+    }
+
+    &__links > li {
+        display: inline-block;
+        font-weight: 500;
+
+        &:not(:first-child), &:not(:nth-child(2)) {
+            margin-right: .3em;
+        }
+
+        &:first-child, &:nth-child(2) {
+            margin-right: 1.875em;
+        }
+
+        &:nth-child(2) {
+            color: #2f5b83;
+        }
+
+        // SHAME
+        &:nth-child(2) > i {
+            font-size: .6rem;
+        }
+    }
+}

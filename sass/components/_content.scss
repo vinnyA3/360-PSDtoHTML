@@ -1,0 +1,95 @@
+/*
+    CONTENT COMPONENT
+    desc: a reusable object used across page
+*/
+
+.content-block {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+
+    &__title {
+        font-size: 2.25rem;
+        line-height: 2.875rem;
+        font-weight: 300;
+    }
+
+    &__title--bold {
+        font-weight: bolder;
+    }
+
+    &__info {
+        font-size: 1.625rem;
+        line-height: 2.125rem;
+    }
+
+    &__info--medium {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    // Centered text 
+    &__title--center, &__info--center {
+        text-align: center;
+    }
+
+    // Light font 
+    &__title--light,&__info--light {
+        color: #fff;
+    }
+
+    &__image {
+        display: none;
+
+        @include break(lg) {
+            display: block;
+            position: relative;
+        }
+    }
+
+    &__image--lg-offset {
+        position: absolute;
+        top: -8em;
+        right: 0;
+        z-index: 2000;
+    }
+
+    &__image--right {
+        float: right;
+    }
+
+    &__image--left {
+        float: left;
+    }
+
+    &__image-bottom {
+        position: relative;
+        bottom: -.05em;
+        right: 0;
+        z-index: 4000;
+    }
+
+    &__image--large {
+        width: 88%;
+    }
+
+    &__image--inline {
+        display: inline-block;
+        margin-top: 3em;
+        width: 55%;
+
+        @include break(md) {
+            width: 35%;
+        }
+
+        @include break(lg) {
+            display: none;
+        }
+    }
+
+    // Content Block Media Query
+    @include break(lg) {
+        text-align: left;
+    }
+}

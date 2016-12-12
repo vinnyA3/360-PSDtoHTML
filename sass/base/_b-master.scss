@@ -1,0 +1,80 @@
+$base-font-family: 'Open Sans Condensed', sans-serif;
+$base-font-color: #666;
+$base-heading-color: #333;
+
+
+*, *::after, *::before {
+    box-sizing: border-box
+}
+
+html, body {
+    @extend %maximum-width;
+    @media screen and (min-width: 88.69rem) {
+        width: 88.69rem;
+        margin: 0 auto;
+    }
+}
+
+p {
+    font-family: $base-font-family;
+    color: $base-font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $base-font-family;
+    color: $base-heading-color;
+    padding: 0;
+    margin: 0;
+    letter-spacing: .02em;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    font-family: $base-font-family;
+    letter-spacing: .06em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover, &:visited {
+        color: inherit;
+    }
+}
+
+img {
+    width: 80%;
+    height: auto;
+    display: inline-block;
+}
+
+button {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type="text"], input[type="submit"], input[type="email"] {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+label {
+    font-family: $base-font-family;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}

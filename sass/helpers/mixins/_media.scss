@@ -1,0 +1,9 @@
+/*
+    MEDIA MIXIN
+    desc: This mixin will provide a reusable structure component for 
+    the media block.
+*/
+
+@mixin media {
+    @include media-container;
+}
